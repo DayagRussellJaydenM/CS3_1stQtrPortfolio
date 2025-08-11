@@ -6,7 +6,7 @@
       let age = window.prompt("Type your age: ", 14);
       let maxAge = window.prompt("Until what age do you think you'll live?: ", 85);
       let numPerDay = window.prompt("Number of favorite snacks eaten per day: ", 2);
-      let sure = window.prompt(" Are you sure?");
+      let sure = window.confirm(" Are you sure?");
 
       if (sure){
          let totalRequired = (numPerDay * 365) * (maxAge - age);  
