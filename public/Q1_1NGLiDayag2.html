@@ -10,14 +10,32 @@
         </label></br/>
     
         <label> Enter number of snacks: 
-            <input id = "age" />
+            <input id = "numPerDay" />
         </label> </br/>
-    
+        <button onclick = "giveMeMySnacks()">Confirm data</button>
+  
         <p>Result:
-            <span id="resultHere"></span>
-        </p>
+            <span id="totalRequired" >  </span>
+        <p>
         
-        <button>Confirm data</button>
+
+        <script>
+            function giveMeMySnacks (){
+                let age = document.getElementById("age").value;
+                let maxAge = document.getElementById("maxAge").value;
+                let numPerDay = document.getElementById("numPerDay").value;
+                let sure = window.confirm(" Are you sure?");
+      
+                    if (sure){
+                        let totalRequired = (numPerDay * 365) * (maxAge - age);  
+                        document.getElementById("totalRequired").innerHTML = `<b> You need ${totalRequired} of snacks to survive until the ripe old age of ${maxAge} </b>`;
+                        }
+                     else{
+                        window.alert("Please run the program again");
+                     }
+            }
+                
+        </script>
         
     </body>
 </HTML>
