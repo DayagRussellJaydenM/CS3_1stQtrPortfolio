@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title> Meal Calculator </title> 
+<body>
+  <h1> Q1 3rd Graded Exercise submitted by Dayag of 9 - Lithium </h1>
+
+  <label>Meal Price:</label>
+  <input id="mealPrice" value="0" ><br><br>
+
+  <label>Tip:</label>
+  <input id="tip" value="0" > <br><br>
+
+  <label>Service Charge (%):</label>
+  <input id="serviceCharge" value="0" ><br><br>
+
+  <button onclick="totalMeal()">Complete</button>
+
+  <p id="output"></p>
+</body>
+  <script>
+    function totalMeal() {
+
+      let mealPrice = parseFloat(document.getElementById("mealPrice").value);
+      let tip = parseFloat(document.getElementById("tip").value);
+      let serviceCharge = parseFloat(document.getElementById("serviceCharge").value);
+
+      
+      let totalCost = mealPrice + tip + (serviceCharge / 100 * mealPrice);
+
+      document.getElementById("output").innerHTML = "Total Cost: " + totalCost.toFixed(2);
+
+
+    }
+  </script>
+</head>
+
+CITATIONS:
+Ministry of JavaScript. (2022, August 13). What  is .toFixed() in JavaScript [Video]. YouTube. https://www.youtube.com/watch?v=MxOxFRc8YjU 
+</html>
+
