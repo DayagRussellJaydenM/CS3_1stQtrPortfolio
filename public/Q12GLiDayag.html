@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title> Meal Calculator </title> 
 <body>
   <h2> Q1 2nd Graded Exercise submitted by Dayag of 9 - Lithium </h2>
 
@@ -16,7 +15,9 @@
 
   <button onclick="totalMeal()">Complete</button>
 
-  <p id="output"></p>
+  <p>Total Cost:
+            <span id="result" >  </span>
+        <p>
 </body>
   <script>
     function totalMeal() {
@@ -28,7 +29,7 @@
       
       let totalCost = mealPrice + tip + (serviceCharge / 100 * mealPrice);
 
-      document.getElementById("output").innerHTML = "Total Cost: " + totalCost.toFixed(2);
+      document.getElementById("result").innerHTML = totalCost.toFixed(2);
 
 
     }
